@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>test</h1>
-    <script
-    >
-const compareString = (tmapString) => {
-  return (vietnamese.includes(tmapString));
-};
-const countVietnamese = (string) => {
-  let count = 0;
-  let i = 0;
-  while (i < string.length) {
-    let tmapString = string.slice(i, i + 2);
-    if (compareString(tmapString)) {
-      count++;
-      i = i + 2;
-    } else {
-      if (string[i] === "w") {
- 
-        count++;
-      }
-      i++;
-    }
-  }
-  return count;
-};
-const vietnamese = [
-  "aw",
-  "aa",
-  "ee",
-  "oo",
-  "ow",
-  "dd",
-];
-const string = "wawaawwa";
-console.log("count string is : " + countVietnamese(string));
-
-</script>
-</body>
+    <script>
+      const compareString = (tmapString) => {
+        return vietnamese.includes(tmapString);
+      };
+      const countVietnamese = (string) => {
+        let count = 0;
+        let i = 0;
+        const vietnamese = ["aw", "aa", "ee", "oo", "ow", "dd"];
+        while (i < string.length) {
+          let tmapString = string.slice(i, i + 2);
+          if (compareString(tmapString)) {
+            count++;
+            i = i + 2;
+          } else {
+            if (string[i] === "w") {
+              count++;
+            }
+            i++;
+          }
+        }
+        return count;
+      };
+  
+      const string = "wawaawwa";
+      console.log("count string is : " + countVietnamese(string));
+    </script>
+  </body>
 </html>
