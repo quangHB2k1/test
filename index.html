@@ -18,12 +18,11 @@ const countVietnamese = (string) => {
   while (i < string.length) {
     let tmapString = string.slice(i, i + 2);
     if (compareString(tmapString)) {
-        console.log(tmapString)
       count++;
       i = i + 2;
     } else {
       if (string[i] === "w") {
-        console.log("w")
+ 
         count++;
       }
       i++;
