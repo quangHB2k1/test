@@ -8,16 +8,14 @@
   <body>
     <h1>test</h1>
     <script>
-      const compareString = (tmapString) => {
-        return vietnamese.includes(tmapString);
-      };
+  
       const countVietnamese = (string) => {
         let count = 0;
         let i = 0;
         const vietnamese = ["aw", "aa", "ee", "oo", "ow", "dd"];
         while (i < string.length) {
           let tmapString = string.slice(i, i + 2);
-          if (compareString(tmapString)) {
+          if (vietnamese.includes(tmapString)) {
             count++;
             i = i + 2;
           } else {
@@ -30,7 +28,7 @@
         return count;
       };
   
-      const string = "wawaawwa";
+      const string = "wawaawwwwwa";
       console.log("count string is : " + countVietnamese(string));
     </script>
   </body>
